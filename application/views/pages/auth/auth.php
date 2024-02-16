@@ -74,10 +74,10 @@
                     <?= $type === 'register' ? 'Create new account' : 'Login with your credentials' ?>
                 </p>
                 <label for="inputusername" class="sr-only">Username </label>
-                <input type="text" id="inputusername" class="form-control" name="username" placeholder="Username">
+                <input value="<?= set_value('username') ?>" type="text" id="inputusername" class="form-control" name="username" placeholder="Username">
                 <small class="text-danger"><?php if (form_error('username')) echo form_error('username') ?></small>
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password">
+                <input value="<?= set_value('password') ?>" type="password" id="inputPassword" class="form-control" name="password" placeholder="Password">
                 <small class="text-danger"><?php if (form_error('password')) echo form_error('password') ?></small>
                 <button style="font-size: 1rem;" class="btn btn-lg btn-primary btn-block mt-auto text-capitalize" type="submit"><?= $type ?></button>
 
